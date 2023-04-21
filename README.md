@@ -5,9 +5,14 @@
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
 sudo dpkg -i minikube_latest_amd64.deb
 ```
-Start minikube cluster
+**Start minikube cluster**
 ```
 minikube start --force
+```
+**Pause and Stop the minikube Cluster**
+```
+minikube pause
+minikube stop
 ```
 **Install kubectl on Ubuntu**
 ```
@@ -24,4 +29,16 @@ sudo apt-get install -y kubectl
 **Kubectl version**
 ```
 kubectl version --client
+```
+**Interact with your cluster**
+```
+kubectl get po -A
+```
+**Use kubectl to forward the port command**
+```
+kubectl port-forward service/hello-minikube 7080:8080
+```
+Your application is now available at 
+```
+http://localhost:7080/
 ```
