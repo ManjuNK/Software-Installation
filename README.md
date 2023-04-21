@@ -59,6 +59,11 @@ kubectl get pods -n ingress-nginx
 ```
 minikube delete --all
 ```
+**Minikube Dashboard URL**
+```
+minikube dashboard --url
+```
+
 
 
 
