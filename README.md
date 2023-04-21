@@ -42,3 +42,23 @@ Your application is now available at
 ```
 http://localhost:7080/
 ```
+**Browse the catalog of easily installed Kubernetes services**
+```
+minikube addons list
+```
+**Enable the Ingress controller**
+1: To enable the NGINX Ingress controller, run the following command:
+```
+minikube addons enable ingress
+```
+2: Verify that the NGINX Ingress controller is running
+```
+kubectl get pods -n ingress-nginx
+```
+**Delete all of the minikube clusters**
+```
+minikube delete --all
+```
+
+
+
